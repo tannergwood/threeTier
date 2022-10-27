@@ -120,6 +120,11 @@ function change_value() {
       ) {
         case "first_name": // validating the first_name field of the employee table
           console.log("changing first name");
+          if (this.value.length < 2) {
+            this.focus();
+            alert("First name must be at least 2 characters");
+            return;
+          }
           break;
         default:
       }
